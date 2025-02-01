@@ -19,6 +19,7 @@ import { RemoveItemOrderController } from "./controllers/order/RemoveItemOrderCo
 import { SendOrderController } from "./controllers/order/SendOrderController"
 import { ListSendedOrdersController } from "./controllers/order/ListSendedOrdersController"
 import { OrderDetailController } from "./controllers/order/OrderDetailController"
+import { FinishOrderController } from "./controllers/order/FinishOrderController"
 
 const express = require('express')
 const router = express()
@@ -46,5 +47,6 @@ router.delete('/order/remove', isAuthenticate, new RemoveItemOrderController().h
 router.put('/order/send', isAuthenticate, new SendOrderController().handle)
 router.get('/orders', isAuthenticate, new ListSendedOrdersController().handle)
 router.get('/order/detail', isAuthenticate, new OrderDetailController().handle)
+router.put('/order/finish', isAuthenticate, new FinishOrderController().handle)
 
 export { router }
