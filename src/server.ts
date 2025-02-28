@@ -28,4 +28,4 @@ app.use((err: Error, req: Request, response: Response, next: NextFunction) => {
     })
 })
 
-app.listen(3333, () => console.log('Server 3333'))
+app.listen(3333, () => console.log('Server running on port 3333'))
